@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dbfiles from "./db/database.js";
-import { User, Restaurant, Review } from "./models/index.js";
+
 
 // Import routes
 import authRoutes from "./routes/authRoutes.js";
