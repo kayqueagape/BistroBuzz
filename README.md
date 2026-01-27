@@ -93,4 +93,4 @@ Push to the Branch (git push origin feature/AmazingFeature)
 
 Open a Pull Request
 
-Developed by [Kayque]
+Developed by Kayque
