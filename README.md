@@ -56,7 +56,7 @@ The project uses a relational structure to handle complex associations between u
    cd restaurant-discoveries
    npm install
 
-##🔑 Environment Variables
+## 🔑 Environment Variables
 
 Create a .env file in the root directory and add the following:
 
@@ -69,7 +69,7 @@ DB_DIALECT=postgres
 JWT_SECRET=your_super_secret_key
 
 
-##📜 Available Scripts
+## 📜 Available Scripts
 npm run dev: Starts the server with Nodemon for development.
 
 npm start: Starts the production server.
@@ -80,7 +80,7 @@ npx sequelize-cli db:seed:all: Populates the database with initial sample data.
 
 
 
-🤝 Contributing
+## 🤝 Contributing
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
 Fork the Project
