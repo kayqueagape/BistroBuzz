@@ -1,76 +1,52 @@
 # DineExplore Backend API
 
-Backend API para a plataforma DineExplore construída com Node.js, Express, Sequelize e PostgreSQL.
+Backend API for the DineExplore platform built with Node.js, Express, Sequelize, and PostgreSQL.
 
-## 🚀 Funcionalidades
+## 🚀 Features
 
-- **Autenticação JWT**: Sistema seguro de autenticação com tokens JWT
-- **CRUD de Restaurantes**: Gerenciamento completo de restaurantes
-- **Sistema de Reviews**: Avaliações e comentários de usuários
-- **Filtros Inteligentes**: Busca por localização, culinária, avaliação
-- **Chat em Tempo Real**: Comunicação em tempo real usando Socket.io
-- **Geolocalização**: Busca de restaurantes próximos usando coordenadas
+- **JWT Authentication**: Secure authentication system with JWT tokens
+- **Restaurant CRUD**: Complete restaurant management
+- **Review System**: User ratings and comments
+- **Smart Filters**: Search by location, cuisine, rating
+- **Real-Time Chat**: Real-time communication using Socket.io
+- **Geolocation**: Search for nearby restaurants using coordinates
 
-## 📋 Pré-requisitos
+## 📋 Prerequisites
 
-- Node.js (v18 ou superior)
-- PostgreSQL (ou banco de dados compatível)
-- npm ou yarn
+- Node.js (v18 or higher)
+- PostgreSQL (or compatible database)
+- npm or yarn
 
-## 🔧 Instalação
+## 🔧 Installation
 
-1. Instale as dependências:
+1. Install dependencies:
 ```bash
 npm install
 ```
 
-2. Configure as variáveis de ambiente no arquivo `.env`:
+2. Configure environment variables in the `.env` file:
 ```env
-DATABASE="sua-string-de-conexao-postgresql"
-JWT_SECRET="seu-secret-jwt-super-seguro"
+DATABASE=“your-postgresql-connection-string”
+JWT_SECRET="your-super-secure-jwt-secret"
 PORT=3000
 ```
 
-3. Execute o servidor:
+3. Run the server:
 ```bash
 npm run dev
 ```
 
-O servidor estará rodando em `http://localhost:3000`
+The server will be running at `http://localhost:3000`
 
-## 📚 Endpoints da API
+## 📚 API Endpoints
 
-### Autenticação
-- `POST /api/auth/register` - Registrar novo usuário
-- `POST /api/auth/login` - Fazer login
-- `GET /api/auth/profile` - Obter perfil do usuário (requer autenticação)
+### Authentication
+- `POST /api/auth/register` - Register new user
+- `POST /api/auth/login` - Log in
+- `GET /api/auth/profile` - Get user profile (requires authentication)
 
-### Restaurantes
-- `GET /api/restaurants` - Listar restaurantes (com filtros opcionais)
+### Restaurants
+- `GET /api/restaurants` - List restaurants (with optional filters)
   - Query params: `latitude`, `longitude`, `radius`, `cuisine`, `minRating`, `search`
-- `GET /api/restaurants/:id` - Obter detalhes de um restaurante
-- `POST /api/restaurants` - Criar restaurante (requer autenticação)
-- `PUT /api/restaurants/:id` - Atualizar restaurante (requer autenticação)
-- `DELETE /api/restaurants/:id` - Deletar restaurante (requer autenticação)
-
-### Reviews
-- `POST /api/reviews` - Criar review (requer autenticação)
-- `PUT /api/reviews/:id` - Atualizar review (requer autenticação)
-- `DELETE /api/reviews/:id` - Deletar review (requer autenticação)
-- `GET /api/reviews/restaurant/:restaurantId` - Listar reviews de um restaurante
-
-### Usuários
-- `GET /api/users` - Listar usuários (requer autenticação)
-- `GET /api/users/:id` - Obter usuário por ID (requer autenticação)
-
-## 🔌 Socket.io Events
-
-### Cliente → Servidor
-- `join-restaurant` - Entrar na sala de um restaurante
-- `leave-restaurant` - Sair da sala de um restaurante
-- `chat-message` - Enviar mensagem no chat
-- `new-review` - Notificar novo review
-
-### Servidor → Cliente
-- `chat-message` - Receber mensagem do chat
-- `review-added` - Notificação de novo review
+- `GET /api/restaurants/:id` - Get details of a restaurant
+- `POST /api/restaurants` - Create restaurant
